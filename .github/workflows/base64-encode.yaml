@@ -2,8 +2,6 @@ name: Encode cloud-init.yaml
 
 on:
   push:
-    paths:
-      - 'cloud-init.yaml'
 
 jobs:
   encode-cloud-init:
@@ -12,6 +10,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Show cloud-init version
+        run: |
+          if command -v cloud-init &> /dev/null; then
+            cloud-init --version
+          else
+            echo "cloud-init is not installed."
+          fi
 
       - name: Validate cloud-init.yaml with cloud-init
         run: |
