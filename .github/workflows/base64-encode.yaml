@@ -22,7 +22,12 @@ jobs:
       - name: Validate cloud-init.yaml with cloud-init
         run: |
           if command -v cloud-init &> /dev/null; then
-            cloud-init devel schema --config-file cloud-init.yaml
+            if cloud-init schema --config-file cloud-init.yaml 2>/dev/null; then
+              echo "cloud-init.yaml is valid."
+            else
+              echo "cloud-init schema validation failed."
+              exit 1
+            fi
           else
             echo "cloud-init is not installed. Please install it to validate the YAML file."
             exit 1
