@@ -13,6 +13,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Validate cloud-init.yaml with cloud-init
+        run: |
+          if command -v cloud-init &> /dev/null; then
+            cloud-init devel schema --config-file cloud-init.yaml
+          else
+            echo "cloud-init is not installed. Please install it to validate the YAML file."
+            exit 1
+          fi
+
       - name: Generate base64 encoded version
         run: |
           base64 cloud-init.yaml > cloud-init.yaml.b64
