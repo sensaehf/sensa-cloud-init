@@ -22,8 +22,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Only commit if file changed
-          if ! git diff --quiet cloud-init.yaml.b64; then
+          # Commit if file is new or changed
+          if [[ -n "$(git status --porcelain cloud-init.yaml.b64)" ]]; then
             git add cloud-init.yaml.b64
             git commit -m "Update base64 encoded version of cloud-init.yaml"
             git push
