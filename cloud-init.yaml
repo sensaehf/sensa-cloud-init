@@ -1,3 +1,33 @@
 #cloud-config
-network:
-  config: disabled
+users:
+- name: sensa-agustkri
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  lock_passwd: true
+  ssh_authorized_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGcMhaDl93FvIVKyp7g16iwq4A7Z4z9Yuv1J5zppmq8wZSkZU2lMkUHlNF/4IQBtHApTRWPAkqXO0UrcGrclKzc3m7o69/cCcRB7zn1bQ58+o049tT/kMA5TlqG2QY1Kveal3CUxD8cmwGQY0mBuUQ6kdw/kpTj/hXuKg0UEd1HzF2NpF52MW825eD2CufqoBCspTT/NsC5GI8yp7byDCgJUkKzzVub0UM9G6Y3nRvJvzJMRD/Febm7FaoFYut9/2nkIKVwBo1AW7thLsMO4lYvvBMKBNhyVQnsBBmejzgS/3j7mybNPeeyiwLL++7EVIAcuIF+N5XAj0HALSD2uTKhXLmkOF/d+8YU5jX6sUIOgLtaUcOAwYhkN1P1duADZN6iNn/b4frj4v4ObE+ZyjssuoyCpiJZFMadJ59KX4Vt+WYimBx3tZX7s1JXVOgTqYZODuCetbxPynhHJvR7yjJySLhCBF7C61vhetmFZipSbUfBpx2JK3bu/E2mB6a3o0="
+- name: sensa-eythori
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  lock_passwd: true
+  ssh_authorized_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCrdFAENpjbzMi0x8c3bVZC780L2yN5wPzOTwrAS7QP6TjgF7dJ6U4tLHuhx/LAL3MDVhPa7w6WlXO89PWPD06U/NsBblDRKYqjf2cJzLOxTI86jOSgx9iQrfivk+blW8dEU3rOYiDbupSq5lgx39UoLEssnV9nkBpRYLED7it/CtXoAzivUUoyXYOvCJCuwDRZGj2TGrjQ+OjNv90p8oDye1UQiG6qqLmkwyRo4udV0pt90NauitLwb2pl07ljJO0gYBaSGLMUmaI/HwwVncjJCmXJqIWUmGufz+0kXyjuROGJNm0Q2JYH5r/nAHu2tMXkWuelao9mRFrEUacEIcmhf5t4BJmWwbNS0CvKpq5P9OEV51pIvnfQhW20tTMdbU18qHtRdzXSSIJC9ehVFTUmqlaxhzQSuSj+XzRTFyxUO6dV4zIsNz6ddFxD/CRoUCS1eDNLMqHYO0CCq2nStIOeV0+itMYCLuvYZXT6hqofbGctgY3moF3AfeLl511uhYU= eythori\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMSE03jhnhmUorvp34tnWWIsFwxu3011UK2Hin433sR1 eythori"
+- name: sensa-jha
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  lock_passwd: true
+  ssh_authorized_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCCBMPHoCVCByEEJHClKnlZZPKCyQ4tpR+TpsQ9Du2QZostcv60KMWvecph6mXfCw3f2A4xpg8RcCOsslQmu+SiW09F4KTJs7XbC6DTHo92giN0tlsS5l6h/wj990TojgpXoDpBuJBMkFJIXcPS7btaHi0uvEqXY5QJsYqxSL8ZasnW4+2aLESYvvR5Kb8P/ysh51Kxz1HzD9VIhH+TngnALN7ELgqjLCTi6ceel/b9j1FsNZ3fWq/sRFWe39vcjNq1fV8QaBVP3MDPMS4WxWyKLWTglJbtIgdKS9kGW5ACfBuJzZm4B49sK/IiIUwI5W0nOiKujJxdu3/sfqTf/WB jha@sensa.is"
+- name: sensa-saevarg
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  lock_passwd: true
+  ssh_authorized_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBTWy3bd4/69h8rs9mCQNMpBN6gRawRnyYdOB3aiVBLtgTk81oJ7L2gBq7Epys5tf39DCdarXeQfIUGJiK0s4q4PAv82FoGFKTQIIMm9o4wZV96HjImaCXrbubdtVCIiPjWpfgqBpoiXIOhL8snztzgQCgA15piFgXN2w20IVVStwfVBsZNxukdJ7wtbU1fcPhvA91YK2RqEtmyYoa9HT49zEWfA0Q55AAYkK0ehn4z8BPRGEErMBjcv0898Hmkt+zQaTCkNK9Vc72DemlUmB4gA5i/h5Ktz2YDioIvp8h8bdE7WmoI4gfBwR3I6zRNTZIhAP7btBhSRK3XW5s9GIVk8LlEddDQX8r9WBx0QuyYsfGWg/il1+8tXarMbPoFr2bEgXHgoiXVJvn+E46GcyKXalixBL31tUaB/DUDBwqw3EOAhJkngYz4HhrRHccmTnvhmeCY4uUOfCUYkIXX5DWty/Zrxrz9EoDSyJF3lZ0WykZOtZujU0fy+oyMFYqM/lpw4nO+wd9Ac/bv0/Vicl/NOEcFFuAHmjNvJCwBFMGQ704Mg5MH2vktONEkaIZIj5deftqk9mq5VJYDysB0w4tjSMPW6BQzfFk+EaoRfmznatmEPeZPO3dZDhmuolo6S0hlCYzFS/wdS5Pypkwr6fyXsnY1CaNRFu1qMpymR9L1Q== saevar@SE00613"
+- name: sensa-sigurdurbo
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  lock_passwd: true
+  ssh_authorized_keys:
+    - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDupc1NlwAbBNoQb3ZB4IfTNlmH8ZYQ+3aFVMYnDj5INI1EQmgfYKq9Hi0hSBYYsT2cjsz3RvOpAxg8mNL3KsZldtsuG5X+kCCRReCchsikkOlai9TQNEaG0kI0K1iJMvjGM/35VLidJgIibFFDOw+6vWbmoDHvx3P8iu/jwoe976Tnp7MDkjWv9k/+Ur56kDOOGrw3ve21PjthaWooyPxCAg6fUz5zdYkfFuHk6fQuZHM1nU4OgnxNTa9iQC91h5BIuf8BbbqKkmguwblrTYUGYWDm2VJPWeZMXqzC+946qycce0g98yO2hKtH2xW0owrf2RMmTcqpB/U24i90pqwB sigurdurbo@sensa.is"
+
