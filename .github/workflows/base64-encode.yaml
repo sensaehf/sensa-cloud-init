@@ -22,7 +22,7 @@ jobs:
       - name: Validate user-data.yaml with cloud-init
         run: |
           if command -v cloud-init &> /dev/null; then
-            if cloud-init schema --config-file cloud-init.yaml 2>/dev/null; then
+            if cloud-init schema --config-file user-data.yaml 2>/dev/null; then
               echo "user-data.yaml is valid."
             else
               echo "user-data schema validation failed."
