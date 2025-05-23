@@ -1,4 +1,6 @@
 #cloud-config
+package_upgrade: true
+
 users:
 - name: sensa-agustkri
   sudo: ALL=(ALL) NOPASSWD:ALL
@@ -31,3 +33,6 @@ users:
   ssh_authorized_keys:
     - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDupc1NlwAbBNoQb3ZB4IfTNlmH8ZYQ+3aFVMYnDj5INI1EQmgfYKq9Hi0hSBYYsT2cjsz3RvOpAxg8mNL3KsZldtsuG5X+kCCRReCchsikkOlai9TQNEaG0kI0K1iJMvjGM/35VLidJgIibFFDOw+6vWbmoDHvx3P8iu/jwoe976Tnp7MDkjWv9k/+Ur56kDOOGrw3ve21PjthaWooyPxCAg6fUz5zdYkfFuHk6fQuZHM1nU4OgnxNTa9iQC91h5BIuf8BbbqKkmguwblrTYUGYWDm2VJPWeZMXqzC+946qycce0g98yO2hKtH2xW0owrf2RMmTcqpB/U24i90pqwB sigurdurbo@sensa.is"
 
+updates:
+  network:
+    when: ["boot", "boot-new-instance", "hotplug"]
